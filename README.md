@@ -1,0 +1,1 @@
+# proiect-smart-security-system
