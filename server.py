@@ -1,11 +1,11 @@
-import serial  # Pentru comunicare serială
-import json    # Pentru manipularea datelor JSON
-from pushbullet import Pushbullet  # Pentru trimiterea notificărilor
+import serial 
+import json    
+from pushbullet import Pushbullet  
 
 # Configurare port serial
-serial_port = "COM5"  # Înlocuiește cu portul pe care este conectat Arduino (ex.: COM3 pe Windows, /dev/ttyUSB0 pe Linux)
-baud_rate = 9600      # Viteza de comunicare serială
-pb_api_key = "o.O18gn1ycb4dK826dtoHoa9jBWVBU7QtR"  # Înlocuiește cu API Key-ul tău Pushbullet
+serial_port = "COM5"  
+baud_rate = 9600     
+pb_api_key = "..."  #API pentru aplicația PushBullet (depinde de API-ul pentru fiecare utilizator)
 
 # Inițializare Pushbullet
 pb = Pushbullet(pb_api_key)
@@ -30,7 +30,7 @@ def send_notification(title, message):
     except Exception as e:
         print(f"Eroare la trimiterea notificării: {e}")
 
-# Ascultare continuă a datelor de la Arduino
+
 try:
     while True:
         if ser.in_waiting > 0:  # Verificăm dacă sunt date disponibile în buffer
@@ -79,3 +79,4 @@ finally:
     if 'ser' in locals() and ser.is_open:
         ser.close()
     print("Conexiunea serială a fost închisă.")
+
