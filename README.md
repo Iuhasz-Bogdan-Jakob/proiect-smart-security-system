@@ -2,6 +2,7 @@
 Sistem de Securitate IoT pentru Casă
 
 Acest proiect reprezintă un sistem de securitate inteligent bazat pe platforma Arduino, conceput pentru a monitoriza mișcarea, prezența gazelor periculoase și starea punctelor de acces (uși/ferestre). Sistemul integrează tehnologii IoT pentru a trimite notificări în timp real direct pe smartphone-ul utilizatorului.
+
 Caracteristici principale
 
     Monitorizare Multi-Senzor: Detectează mișcarea (PIR), scurgerile de gaze sau fumul (MQ-2) și deschiderea ușilor (senzor magnetic Reed).
